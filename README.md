@@ -11,6 +11,6 @@ Here are my long term objectives:
 3. Create a functional terminal manga reader
 
 ## Libraries Used
-As of now, I use the manganelo python library for this function, although in the long term I wish to expand this to other websites.
+As of now, I use the requests and bs4 python libraries for this function, although in the long term I wish to expand this to other websites.
 
 
