@@ -1,9 +1,25 @@
-import time
-import manganelo
+import requsets
+from bs4 import BeautifulSoup
 import json
+
+
 def scan(nurl, chaps):
-    manga = manganelo.get_story_page(url = nurl)
-    new_chaps = manga.chapter_list()
+    page = requests.get(url=nurl)
+
+    if page.status_code == 200:
+        print("Success!")
+    elif page.status_code == 404:
+        print("Not Found.")
+    else :
+        print("Not Identified")
+    manga = BeuatifulSoup(page.text,'html.parser')
+    chapter_list=[]
+    chaps=manga.select('div.chapter-list')
+    for chapter in chaps:
+        chapter_title= chapter.a.text
+        chapter_url = chapter.a.get('href')
+        chapter_list.append({"title": chapter_title, "url": chapter_url})
+    new_chaps = chapter_list
 
     # I don't like this, but whatever it works
     # If future me wonders what it is, basically new_chaps by default is a "manganelo.chapter" object

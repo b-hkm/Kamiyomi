@@ -1,5 +1,5 @@
-import manganelo
-
+import requests
+from bs4 import BeautifulSoup
 
 def init():
     print("Initializing Manga File")
