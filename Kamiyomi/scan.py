@@ -56,7 +56,6 @@ def main():
         for i, manga in enumerate(manga_list):
             chapter_list = scan(manga, chapter_list)
             #TODO add JSON/Class support for scan
-
-        time.sleep(15)    
+        return "finished scaning"
 
 main()
