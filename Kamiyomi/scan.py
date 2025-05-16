@@ -1,4 +1,4 @@
-import requsets
+import requests
 from bs4 import BeautifulSoup
 import json
 
@@ -22,9 +22,7 @@ def scan(nurl, chaps):
     new_chaps = chapter_list
 
     # I don't like this, but whatever it works
-    # If future me wonders what it is, basically new_chaps by default is a "manganelo.chapter" object
-    for i, chap in enumerate(new_chaps):
-        new_chaps[i] = chap.title
+    # If future me wonders what it is, basically new_chaps by default is a "manganelo.chapter" obje
     
 
     if chaps == "":
@@ -56,7 +54,7 @@ def main():
                 chapter_list.append('')
 
         for i, manga in enumerate(manga_list):
-            chapter_list[i] = scan(manga, chapter_list[i])
+            chapter_list = scan(manga, chapter_list)
             #TODO add JSON/Class support for scan
 
         time.sleep(15)    
