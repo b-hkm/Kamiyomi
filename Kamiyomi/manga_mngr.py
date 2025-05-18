@@ -38,7 +38,7 @@ def add(command):
 def add_url(command):
     f = open("mangalist.txt", "a")
     try:
-        print("Manga ", manganelo.get_story_page(url = command).title, "successfully added")
+        #print("Manga ", manganelo.get_story_page(url = command).title, "successfully added")
         f.write(command + "\n")
     except:
         print("Invalid URL error, please try again with a different URL")
