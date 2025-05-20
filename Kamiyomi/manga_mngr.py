@@ -44,7 +44,7 @@ def add_url(command):
         
     manga_title=BeautifulSoup(manga_page.text,'html.parser')
 
-    print("Manga ", str(manga_title.find("ul",class_="manga-info-text").h1.texte)," successfully add")
+    print("Manga ", str(manga_title.find("ul",class_="manga-info-text").h1.text)," successfully add")
     #print("Manga ", manganelo.get_story_page(url = command).title, "successfully added")
     try:
         f.write(command + "\n")
