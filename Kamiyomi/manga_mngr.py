@@ -42,7 +42,7 @@ def add_url(command):
     if not manga_page.status_code == 200:
         print(f"status error:{ manga_page.status_code }")
         
-    manga_title=BeautifulSoup(manga_page,'html.parser')
+    manga_title=BeautifulSoup(manga_page.text,'html.parser')
 
     print("Manga ", str(manga_title.find(title))," successfully add")
     #print("Manga ", manganelo.get_story_page(url = command).title, "successfully added")
