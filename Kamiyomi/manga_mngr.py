@@ -55,24 +55,7 @@ def add_url(command):
 
 def add_nam(command):
     #TODO complete function
-    '''
-    k = 0
-    found = False
-    while found == False:
-        res = manganelo.search(command[2])
-        for r in res:
-            print(r.title, r.views)
-        if k + 5 > len(res):
-            found = True
-        iter_list = res[0+k:4+k]
-        for j,i in enumerate(iter_list):
-            print("Manga #", j+1,": ", i.title)
-        user_sorc = input("Insert number if manga found or something else if not found")
-        if user_sorc in ["1","2","3","4","5"]:
-            add_url(iter_list[int(user_sorc)])
-            found = True
-        k += 5
-    '''
+    
     print("Please use url, function unavailible at this time")
     return
 
