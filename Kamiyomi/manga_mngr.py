@@ -40,7 +40,7 @@ def add_url(command):
     f = open("mangalist.txt", "a")
     manga_page=requests.get(command)
     if manga_page.status_code != 200:
-        print(f"status error:{ manga_page.status_code })
+        print(f"status error:{ manga_page.status_code }")
     manga_title=BeautifulSoup(manga_page,'html.parser')
     print(manga_title.find(title))
     #print("Manga ", manganelo.get_story_page(url = command).title, "successfully added")
